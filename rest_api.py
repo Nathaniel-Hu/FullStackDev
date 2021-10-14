@@ -60,10 +60,6 @@ class pic(db.Model):
 def index():
     return render_template("index.html")
 
-# @app.route("/<name>")
-# def index(name):
-#     return render_template("index.html", content=["nat", "kat", "matt"])
-
 @app.route("/view")
 def view():
     return render_template("view.html", values=users.query.all())
@@ -123,19 +119,6 @@ def logout():
 @app.route("/admin")
 def admin():
     return redirect(url_for("user", name="Admin!"))
-
-
-# @app.route('/processUserInfo/<string:userInfo>', methods=['POST'])
-# def processUserInfo(userInfo):
-#     userInfo = json.loads(userInfo)
-#     print()
-#     print('PRODUCT INFO RECEIVED')
-#     print(------------------------)
-#     print(f"Product Name: {userInfo['name']}")
-#     print(f"Product Description: {userInfo['type']}")
-#     print()
-
-#     return 'Info Received Successfully'
 
 if __name__ == "__main__":
     db.create_all()
