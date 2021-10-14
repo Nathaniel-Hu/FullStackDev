@@ -36,12 +36,20 @@ class seller(db.Model):
 
 class product(db.Model):
     product_id = db.Column(db.Integer, unique=True, primary_key=True, nullable=False)
-    userid = db.Column(db.String(20), nullable=False) 
+    seller_id = db.Column(db.String(20), nullable=False) 
     category = db.Column(db.String(50))
     name = db.Column(db.String(80), nullable=False)
     description = db.Column(db.String(120))
     price = db.Column(db.String(20), nullable=False)
     colour = db.Column(db.String(20))
+
+    def __init__(self, seller_id, category, name, description, price, colour):
+        self.seller_id = seller_id
+        self.category = category
+        self.name = name
+        self.description = description
+        self.price = price
+        self.colour = colour
 
 
 class pic(db.Model):
