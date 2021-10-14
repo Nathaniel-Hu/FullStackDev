@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+
+    <form action="#" method="POST">
+        <label>Hi {{content}}, Enter your product information here:</label><br>
+        <input type="text" id="productName" placeholder="Enter Product Name"/><br>
+        <input type="text" id="productDesc" placeholder="Enter Product Description"/><br>
+
+        <button type="button" id="myButton" onclick="sendUserInfo()">submit</button>
+    </form>
+
+    <!-- {% for x in content %} -->
+        <!-- <p>{{X}}</p> -->
+        <!-- {% if x == "nat" %} -->
+
+        <!-- {% elif x == "kat" %} -->
+
+        <!-- {% else %} -->
+
+        <!-- {% endif %} -->
+    <!-- {% endfor %} -->
+
+    <script src="index.js">
+    </script>
+</body>
+</html>
+
+<!-- {% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<h1>Test</h1>
+{% endblock %} -->

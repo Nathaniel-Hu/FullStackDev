@@ -1,7 +1,3 @@
-
-// var myName = window.prompt("What's your name?");
-// console.log("Hello", myName);
-
 document.getElementById("myButton").onclick = function(){
     var myProductName = document.getElementById("myProductName").value;
     var myProductDesc = document.getElementById("myProductDesc").value;
